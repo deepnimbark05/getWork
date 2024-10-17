@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get_work/views/map/map_view.dart';
+import 'package:get_work/views/start/Start_view.dart';
 
 import '../views/home/home_view.dart';
 import '../views/login/login_view.dart';
@@ -34,6 +35,7 @@ class AuthController extends GetxController {
     Future.delayed(Duration(seconds: 2), () {
       if (user == null) {
         // User is not signed in, navigate to the login page
+        // Get.offAll(() => Startpage());
         Get.offAll(() => LoginPage());
       } else {
         // User is signed in, navigate to the home page
