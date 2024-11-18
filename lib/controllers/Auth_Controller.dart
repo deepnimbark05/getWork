@@ -35,8 +35,8 @@ class AuthController extends GetxController {
     Future.delayed(Duration(seconds: 2), () {
       if (user == null) {
         // User is not signed in, navigate to the login page
-        // Get.offAll(() => Startpage());
-        Get.offAll(() => LoginPage());
+        Get.offAll(() => Startpage());
+        // Get.offAll(() => LoginPage());
       } else {
         // User is signed in, navigate to the home page
         Get.offAll(() => MapPage());
@@ -73,6 +73,15 @@ class AuthController extends GetxController {
         backgroundColor: Colors.redAccent,
         colorText: Colors.white,
       );
+    }
+  }
+
+  void signInAnonymously() async {
+    try {
+      await FirebaseAuth.instance.signInAnonymously();
+      print("User signed in anonymously");
+    } catch (e) {
+      print("Failed to sign in: $e");
     }
   }
 

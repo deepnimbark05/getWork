@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_work/views/login/login_view.dart';
 import '../../controllers/Auth_Controller.dart';
 
 class CreateAccountPage extends StatefulWidget {
@@ -176,7 +177,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                     SizedBox(height: 20),
                     GestureDetector(
                       onTap: () {
-                        // Navigate to Sign in screen
+                        Get.to(LoginPage()); // Navigate to the Create Account page
                       },
                       child: Text(
                         'Already have an account? Sign in',

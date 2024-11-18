@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get_work/views/nav/appnav.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:get/get.dart';
 import '../../controllers/Map_Controller.dart'; // Import your controller
@@ -63,7 +64,7 @@ class MapPage extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     // Navigate to the home page when "Next" is pressed
-                    Get.to(HomePage());
+                    Get.to(AppNav());
                   },
                   child: Text('Next'),
                 ),
